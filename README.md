@@ -11,7 +11,6 @@
 *View Books <br />
 *Take & Return Books<br />
 *View Issued Books<br />
-*Issue Book<br />
 *Add Reader (ID, Name, Surname, address, email, phone number)<br />
 *View Readers<br />
 
