@@ -12,6 +12,9 @@
 *Take & Return Books<br />
 *Add Reader (ID, Name, Surname, address, email, phone number)<br />
 *View Readers<br />
+*Delete Reader<br />
+*Delete Book<br />
+
 
 ## Flow
 https://www.lucidchart.com/invitations/accept/35bd46dd-f37a-4b5e-bc13-bd77caf3217f
