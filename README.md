@@ -5,7 +5,7 @@
 **Tester:** Stanislav<br />
 **Database Administrator:** Maris<br />
 
-# Functionality
+## Functionality
 Add Book (ID,Status(issued or available), Name of the book, year of publication, author, category[Biography, Childrens,Fiction,History])<br />
 View Books <br />
 Take & Return Books<br />
