@@ -1,8 +1,12 @@
 package libraryManagementSystem;
 
-import java.sql.Statement;
 
-public class Controller {
-    DBHandler dbHandler = new DBHandler();
-    Statement statement = dbHandler.createStatement();
+
+public class Controller extends ViewBooks {
+
+
+    public static void main(String[] args) {
+        ViewBooks view = new ViewBooks();
+        view.viewBooks();
+    }
 }
