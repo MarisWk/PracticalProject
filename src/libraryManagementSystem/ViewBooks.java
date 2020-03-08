@@ -1,23 +1,31 @@
 package libraryManagementSystem;
-import java.sql.ResultSet;
 
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ViewBooks {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/LibraryDB?serverTimezone=UTC";
+        String user = "root";
+        String pass = "root";
 
-    DBHandler dbHandler = new DBHandler();
-    Statement statement = dbHandler.createStatement();
 
-    public void viewBooks(){
         try {
+            Connection connector = DriverManager.getConnection(url, user, pass);
+            Statement statement = connector.prepareStatement(
+                    "SELECT * FROM book");
+            System.out.print(statement);
 
-            ResultSet results2 = statement.executeQuery("SELECT * FROM book");
-            System.out.println(results2);
 
-        } catch (SQLException ex){
-                ex.printStackTrace();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
         }
     }
 }
+
+
 
 
