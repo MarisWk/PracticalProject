@@ -3,25 +3,35 @@ DROP database if exists LibraryDB;
 CREATE DATABASE LibraryDB;
 
 USE LibraryDB;
+//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 
 create table book(
 	id int auto_increment,
-    bookName varchar(255),
-    bookStatus varchar(255),
-    bookYear int(4),
-    bookAuthor varchar(255),
-    bookCategory varchar(255),
+    bookName varchar(255) not null,
+    bookStatus varchar(255) not null,
+    bookYear int(4) not null,
+    bookAuthor varchar(255) not null,
+    bookCategory varchar(255) not null,
     primary key (id)
 );
+
+//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
+
 create table reader(
 	id int auto_increment,
-    readerName varchar(255),
-    readerLastName varchar(255),
-    readerAddress varchar(255),
-    readerPhone varchar(255),
-    readerEmail varchar(255),
+    readerName varchar(255) not null,
+    readerLastName varchar(255) not null,
+    readerAddress varchar(255) not null,
+    readerPhone varchar(255) not null,
+    readerEmail varchar(255) not null,
+    bookID int,
     primary key (id)
 );
+
+//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 
 INSERT INTO book (bookName,bookStatus,bookYear,bookAuthor,bookCategory)
 VALUES 
@@ -34,10 +44,21 @@ VALUES
 ("This is Going to Hurt","Available",2018,"Adam Kay","Biography"),
 ("Critical","Available",2019,"Dr. Matt Morgan","Biography");
 
+//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
+
 INSERT INTO reader (readerName,readerLastName,readerAddress,readerPhone,readerEmail)
 VALUES
+("Andres","Brown","Vaike 12, Tallinn","+37212345678","andres.brown@email.com"),
+("John","Blaese","Kalamaja 5, Tallinn","+3721232131","john.blaese@email.com"),
+("Wilson","Jones","Riia 2, Tartu","+3721231631","wilson.jones@email.com"),
+("Taylor","Miller","Baltik 90, Tartu","+3721231631","taylor.miller@gmail.com"),
+("Johnson","Moore","Tartu 25, Parnu","+3721531731","johnson.moore@gmail.com");
 
+//----------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------
 SELECT * FROM book;
+SELECT * FROM reader;
 
 
 
